@@ -26,18 +26,18 @@
             
             <!-- Logo -->
             <div id="logo">
-                <a href="index.html"><img src="images/logo2.png" data-sticky-logo="images/logo.png" data-transparent-logo="images/logo2.png" alt=""></a>
+                <a href="index.php"><img src="images/logo2.png" data-sticky-logo="images/logo.png" data-transparent-logo="images/logo2.png" alt=""></a>
             </div>
 
             <!-- Main Navigation -->
             <nav id="navigation">
                 <ul id="responsive">
 
-                    <li><a href="index.html" class="current">Home</a></li>
+                    <li><a href="index.php" class="current">Početna stranica</a></li>
 
-                    <li><a href="#">Find Work</a>
-                        <ul class="dropdown-nav">
-                            <li><a href="#">Browse Jobs</a>
+                    <li><a href="poslovi.html">Pretraga poslova</a>
+                        <!-- <ul class="dropdown-nav">
+                            <li><a href="jobs-list-layout-1.html">Browse Jobs</a>
                                 <ul class="dropdown-nav">
                                     <li><a href="jobs-list-layout-full-page-map.html">Full Page List + Map</a></li>
                                     <li><a href="jobs-grid-layout-full-page-map.html">Full Page Grid + Map</a></li>
@@ -59,7 +59,7 @@
                             <li><a href="single-job-page.html">Job Page</a></li>
                             <li><a href="single-task-page.html">Task Page</a></li>
                             <li><a href="single-company-profile.html">Company Profile</a></li>
-                        </ul>
+                        </ul> -->
                     </li>
 
                     <li><a href="#">For Employers</a>
