@@ -1,3 +1,4 @@
+<?php include "./includes/baza.php" ?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -1198,7 +1199,7 @@
 				
 					
 				<!-- Form -->
-				<form method="post" id="register-account-form">
+				<form method="post" action="./registracija.php" id="register-account-form">
 					<div class="input-with-icon-left">
 						<i class="icon-material-baseline-mail-outline"></i>
 						<input type="text" class="input-text with-border" name="emailaddress-register" id="emailaddress-register" placeholder="Email Address" required/>
@@ -1213,17 +1214,14 @@
 						<i class="icon-material-outline-lock"></i>
 						<input type="password" class="input-text with-border" name="password-repeat-register" id="password-repeat-register" placeholder="Repeat Password" required/>
 					</div>
+					<input class="margin-top-10 button full-width" type="submit" value="Register"  >
 				</form>
 				
-				<!-- Button -->
-				<button class="margin-top-10 button full-width button-sliding-icon ripple-effect" type="submit" form="register-account-form">Register <i class="icon-material-outline-arrow-right-alt"></i></button>
 				
-				<!-- Social Login -->
-				<div class="social-login-separator"><span>or</span></div>
-				<div class="social-login-buttons">
-					<button class="facebook-login ripple-effect"><i class="icon-brand-facebook-f"></i> Register via Facebook</button>
-					<button class="google-login ripple-effect"><i class="icon-brand-google-plus-g"></i> Register via Google+</button>
-				</div>
+				
+				
+				
+				
 
 			</div>
 

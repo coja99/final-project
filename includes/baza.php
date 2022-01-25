@@ -20,12 +20,13 @@ class Konekcija
         $this->connection->select_db('poslovi');
 
         //kreiramo tabelu user ako ne postoji
-        $this->connection->query("CREATE TABLE IF NOT EXISTS `user` ( `id_usera` INT NOT NULL AUTO_INCREMENT , `ime` VARCHAR(50) NOT NULL , `prezime` VARCHAR(50) NOT NULL,`email` VARCHAR(50) NOT NULL,`slika` VARCHAR(100),`password` VARCHAR(20) NOT NULL, PRIMARY KEY (`id_usera`))");
+        $this->connection->query("CREATE TABLE IF NOT EXISTS `user` ( `id_usera` INT  AUTO_INCREMENT , `ime` VARCHAR(50) , `prezime` VARCHAR(50),`email` VARCHAR(50) NOT NULL,`slika` VARCHAR(100),`password` VARCHAR(20) NOT NULL, PRIMARY KEY (`id_usera`))");
         //INSERT IGNORE ignorise duplikate za UNIQUE kolonu (username), tako da nece biti ponavljanja admina u tabeli
         // $this->connection->query("INSERT IGNORE INTO `user`(`username`,`password`) VALUES ('admin@admin','adminpass')");
 
-        $this->connection->query("CREATE TABLE IF NOT EXISTS `kompanija` ( `id_kompanije` INT NOT NULL AUTO_INCREMENT , `ime` VARCHAR(50) NOT NULL , `deskripcija` VARCHAR(100) NOT NULL,`email` VARCHAR(50) NOT NULL,`slika` VARCHAR(100),`password` VARCHAR(20) NOT NULL, PRIMARY KEY (`id_kompanije`))");
+        $this->connection->query("CREATE TABLE IF NOT EXISTS `kompanija` ( `id_kompanije` INT  AUTO_INCREMENT , `ime` VARCHAR(50) NOT NULL , `deskripcija` VARCHAR(100) NOT NULL,`email` VARCHAR(50) NOT NULL,`slika` VARCHAR(100),`password` VARCHAR(20) NOT NULL, PRIMARY KEY (`id_kompanije`))");
         $this->connection->query("CREATE TABLE IF NOT EXISTS `kategorije`(`id_kategorije` INT AUTO_INCREMENT, `ime` VARCHAR(50) NOT NULL,PRIMARY KEY (`id_kategorije`))");
+        $this->connection->query("CREATE TABLE IF NOT EXISTS `oglas`(`id_oglasa` INT AUTO_INCREMENT, `ime_oglasa` VARCHAR(50),`pozicija`VARCHAR(50),`deskripcija` VARCHAR(50),`id_firme` INT (10),PRIMARY KEY (`id_oglasa`))");
     }
 
     private function prepareSelectUser()
@@ -33,10 +34,10 @@ class Konekcija
         return $this->connection->prepare("SELECT * FROM `user` WHERE `password`=? AND `username`=?");
     }
     private function prepKreirajUsera(){
-        return $this->connection->prepare("INSERT INTO `user` (`ime`, `prezime`, `email`,`slika`,`password`) VALUES (?,?,?,?,?");
+        return $this->connection->prepare("INSERT INTO `user` (`ime`, `prezime`, `email`,`slika`,`password`) VALUES (?,?,?,?,?)");
     }
     function KreirajUsera($ime,$prezime,$email,$slika,$password){
-        $res = $connection->query("SELECT * FROM `user` WHERE `email` = '$email'");
+        $res = $this->connection->query("SELECT * FROM `user` WHERE `email` = '$email'");
         if($res->num_rows == 1){
             return "Vec postoji taj korisnik";
         }
@@ -44,6 +45,15 @@ class Konekcija
         $kreiraj->bind_param($ime,$prezime,$email,$slika,$password);
         $kreiraj->execute();
         return "Korisnik dodat";
+    }
+    function prepRegistracija(){
+        return $this->connection->prepare("INSERT INTO `user`(`email`,`password`) VALUES (?,?)");
+    }
+    function registrujUsera($email,$password){
+        $kreiraj = $this->prepRegistracija();
+        $kreiraj->bind_param("ss",$email,$password);
+        $kreiraj->execute();
+        return "Uspesna registracija";
     }
 
     function proveriKorisnika($user, $pass): bool
