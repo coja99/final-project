@@ -18,7 +18,7 @@
 
 <!-- Wrapper -->
 <div id="wrapper" class="wrapper-with-transparent-header">
-<?php include "nav.php"; ?>
+<?php include "./includes/nav.php"; ?>
 
 
 
