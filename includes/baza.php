@@ -74,16 +74,16 @@ class Konekcija
         return $result;
     }
     function optionSelectCateogryName(){
-         $rezultat = $this->connection->prepare("SELECT `ime` FROM `kategorije`");
-         $niz = [];
+         $rezultat = $this->connection->prepare("SELECT * FROM `kategorije`");
+         
          foreach($rezultat as $row) {
-             array_push($niz,$row);
-         }
-         return $niz;
+            echo $row["ime"];
 
+         }
+         
     }
     
 }
 
 $connection = new Konekcija();
-
+var_dump($connection->optionSelectCateogryName());

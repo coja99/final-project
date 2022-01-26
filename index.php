@@ -1,3 +1,4 @@
+<?php include "./includes/baza.php" ?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -63,16 +64,7 @@
 					<div class="intro-search-field">
 					<label for="select" class="field-title ripple-effect">Categories :</label>
 						<select id="select" class="selectpicker default" multiple data-selected-text-format="count" data-size="7" title="All Categories" >
-							<option>Admin Support</option>
-							<option>Customer Service</option>
-							<option>Data Analytics</option>
-							<option>Design & Creative</option>
-							<option>Legal</option>
-							<option>Software Developing</option>
-							<option>IT & Networking</option>
-							<option>Writing</option>
-							<option>Translation</option>
-							<option>Sales & Marketing</option>
+							<?php $connection->optionSelectCateogryName(); ?>
 						</select>
 					</div>
 
