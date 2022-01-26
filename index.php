@@ -53,20 +53,16 @@
 					<div class="intro-search-field with-autocomplete">
 						<label for="autocomplete-input" class="field-title ripple-effect">Where?</label>
 						<div class="input-with-icon">
-							<input id="autocomplete-input" type="text" placeholder="Online Job">
+							<input id="autocomplete-input" type="text" placeholder="Serbia">
 							<i class="icon-material-outline-location-on"></i>
 						</div>
 					</div>
 
-					<!-- Search Field -->
-					<div class="intro-search-field">
-						<label for ="intro-keywords" class="field-title ripple-effect">What you need done?</label>
-						<input id="intro-keywords" type="text" placeholder="e.g. build me a website">
-					</div>
 
 					<!-- Search Field -->
 					<div class="intro-search-field">
-						<select class="selectpicker default" multiple data-selected-text-format="count" data-size="7" title="All Categories" >
+					<label for="select" class="field-title ripple-effect">Categories :</label>
+						<select id="select" class="selectpicker default" multiple data-selected-text-format="count" data-size="7" title="All Categories" >
 							<option>Admin Support</option>
 							<option>Customer Service</option>
 							<option>Data Analytics</option>
@@ -98,7 +94,7 @@
 					</li>
 					<li>
 						<strong class="counter">3,543</strong>
-						<span>Tasks Posted</span>
+						<span>Employers</span>
 					</li>
 					<li>
 						<strong class="counter">1,232</strong>
@@ -222,14 +218,15 @@
 				
 				<!-- Section Headline -->
 				<div class="section-headline margin-top-0 margin-bottom-35">
-					<h3>Recent Tasks</h3>
-					<a href="tasks-list-layout-1.html" class="headline-link">Browse All Tasks</a>
+					<h3>Recent Job Offers</h3>
+					<a href="tasks-list-layout-1.html" class="headline-link">Browse All Job Offers</a>
 				</div>
 				
 				<!-- Jobs Container -->
 				<div class="tasks-list-container compact-list margin-top-35">
 						
 					<!-- Task -->
+					<!-- Odavde pocinje jedan oglas na indexu -->
 					<a href="single-task-page.html" class="task-listing">
 
 						<!-- Job Listing Details -->
@@ -243,10 +240,7 @@
 									<li><i class="icon-material-outline-access-time"></i> 2 minutes ago</li>
 								</ul>
 								<div class="task-tags margin-top-15">
-									<span>iOS</span>
-									<span>Android</span>
-									<span>mobile apps</span>
-									<span>design</span>
+									Job Offer description
 								</div>
 							</div>
 
@@ -254,14 +248,12 @@
 
 						<div class="task-listing-bid">
 							<div class="task-listing-bid-inner">
-								<div class="task-offers">
-									<strong>$1,000 - $2,500</strong>
-									<span>Fixed Price</span>
-								</div>
-								<span class="button button-sliding-icon ripple-effect">Bid Now <i class="icon-material-outline-arrow-right-alt"></i></span>
+								
+								<span class="button button-sliding-icon ripple-effect">Apply now<i class="icon-material-outline-arrow-right-alt"></i></span>
 							</div>
 						</div>
 					</a>
+					<!-- Ovde se zavrsava, i tu treba da ide foreach sa svime
 
 					<!-- Task -->
 					<a href="single-task-page.html" class="task-listing">

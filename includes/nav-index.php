@@ -36,46 +36,11 @@
                     <li><a href="index.php" class="current">Home</a></li>
 
                     <li><a href="search-jobs.php">Job search</a>
-                        <!-- <ul class="dropdown-nav">
-                            <li><a href="jobs-list-layout-1.html">Browse Jobs</a>
-                                <ul class="dropdown-nav">
-                                    <li><a href="jobs-list-layout-full-page-map.html">Full Page List + Map</a></li>
-                                    <li><a href="jobs-grid-layout-full-page-map.html">Full Page Grid + Map</a></li>
-                                    <li><a href="jobs-grid-layout-full-page.html">Full Page Grid</a></li>
-                                    <li><a href="jobs-list-layout-1.html">List Layout 1</a></li>
-                                    <li><a href="jobs-list-layout-2.html">List Layout 2</a></li>
-                                    <li><a href="jobs-grid-layout.html">Grid Layout</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Browse Tasks</a>
-                                <ul class="dropdown-nav">
-                                    <li><a href="tasks-list-layout-1.html">List Layout 1</a></li>
-                                    <li><a href="tasks-list-layout-2.html">List Layout 2</a></li>
-                                    <li><a href="tasks-grid-layout.html">Grid Layout</a></li>
-                                    <li><a href="tasks-grid-layout-full-page.html">Full Page Grid</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="browse-companies.html">Browse Companies</a></li>
-                            <li><a href="single-job-page.html">Job Page</a></li>
-                            <li><a href="single-task-page.html">Task Page</a></li>
-                            <li><a href="single-company-profile.html">Company Profile</a></li>
-                        </ul> -->
+                        
                     </li>
 
                     <li><a href="browse-employer.php">Search for an Employer</a>
-                        <!-- <ul class="dropdown-nav">
-                            <li><a href="#">Find a Freelancer</a>
-                                <ul class="dropdown-nav">
-                                    <li><a href="freelancers-grid-layout-full-page.html">Full Page Grid</a></li>
-                                    <li><a href="freelancers-grid-layout.html">Grid Layout</a></li>
-                                    <li><a href="freelancers-list-layout-1.html">List Layout 1</a></li>
-                                    <li><a href="freelancers-list-layout-2.html">List Layout 2</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="single-freelancer-profile.html">Freelancer Profile</a></li>
-                            <li><a href="dashboard-post-a-job.html">Post a Job</a></li>
-                            <li><a href="dashboard-post-a-task.html">Post a Task</a></li>
-                        </ul> -->
+                        
                     </li>
 
                     <li><a href="#">Dashboard</a>

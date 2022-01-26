@@ -25,7 +25,12 @@
 
                 //selektujemo bazu da bi smo radili sa njom
                 $this->conn->select_db('poslovi');
-                
+                function prepSelectCateogryName(){
+                    $conn->prepare("SELECT `ime` FROM `kategorije`");
+                }
+                function SelectCateogryName($kategorija){
+                    $conn->bind_param("s",$kategorija);
+                }
             }
         }
 
