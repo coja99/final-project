@@ -15,7 +15,7 @@
 <body>
     <!-- Header Container
 ================================================== -->
-<header id="header-container" class="fullwidth transparent-header">
+<header id="header-container" class="fullwidth">
 
 <!-- Header -->
 <div id="header">
