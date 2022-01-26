@@ -19,7 +19,7 @@
 <!-- Wrapper -->
 <div id="wrapper">
 
-	<?php include "./includes/nav.php"; ?>
+	<?php include "./includes/nav-ostale.php"; ?>
 
 <div class="clearfix"></div>
 <!-- Header Container / End -->
@@ -88,42 +88,42 @@
 					<div class="company-inner-alignment">
 						<span class="company-logo"><img src="images/company-logo-placeholder.png" alt=""></span>
 						<h4>Acra</h4>
-						<div class="star-rating" data-rating="3.5"></div>
+						Number of job offers
 					</div>
 				</a>
 				<a href="single-company-profile.html" class="company">
 					<div class="company-inner-alignment">
 						<span class="company-logo"><img src="images/browse-companies-02.png" alt=""></span>
 						<h4>Acue</h4>
-						<div class="star-rating" data-rating="5.0"></div>
+						Number of job offers
 					</div>
 				</a>
 				<a href="single-company-profile.html" class="company">
 					<div class="company-inner-alignment">
 						<span class="company-logo"><img src="images/browse-companies-04.png" alt=""></span>
 						<h4>Acorta</h4>
-						<span class="company-not-rated">Minimum of 3 votes required</span>
+						Number of job offers
 					</div>
 				</a>
 				<a href="single-company-profile.html" class="company">
 					<div class="company-inner-alignment">
 						<span class="company-logo"><img src="images/company-logo-placeholder.png" alt=""></span>
 						<h4>Acuneol</h4>
-						<span class="company-not-rated">Minimum of 3 votes required</span>
+						Number of job offers
 					</div>
 				</a>
 				<a href="single-company-profile.html" class="company">
 					<div class="company-inner-alignment">
 						<span class="company-logo"><img src="images/browse-companies-03.png" alt=""></span>
 						<h4>Acodia</h4>
-						<div class="star-rating" data-rating="4.9"></div>
+						Number of job offers
 					</div>
 				</a>
 				<a href="single-company-profile.html" class="company">
 					<div class="company-inner-alignment">
 						<span class="company-logo"><img src="images/company-logo-placeholder.png" alt=""></span>
 						<h4>Acagic</h4>
-						<span class="company-not-rated">Minimum of 3 votes required</span>
+						Number of job offers
 					</div>
 				</a>
 			</div>

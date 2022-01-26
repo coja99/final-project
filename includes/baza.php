@@ -20,7 +20,7 @@ class Konekcija
         $this->connection->select_db('poslovi');
 
         //kreiramo tabelu user ako ne postoji
-        $this->connection->query("CREATE TABLE IF NOT EXISTS `user` ( `id_usera` INT  AUTO_INCREMENT , `ime` VARCHAR(50) , `prezime` VARCHAR(50),`email` VARCHAR(50) NOT NULL,`slika` VARCHAR(100),`password` VARCHAR(20) NOT NULL, PRIMARY KEY (`id_usera`))");
+        $this->connection->query("CREATE TABLE IF NOT EXISTS `user` ( `id_usera` INT  AUTO_INCREMENT , `ime` VARCHAR(50) , `prezime` VARCHAR(50),`email` VARCHAR(50) NOT NULL,`slika` VARCHAR(100),`password` VARCHAR(20) NOT NULL, `poslodavac` BOOLEAN , PRIMARY KEY (`id_usera`))");
         //INSERT IGNORE ignorise duplikate za UNIQUE kolonu (username), tako da nece biti ponavljanja admina u tabeli
         // $this->connection->query("INSERT IGNORE INTO `user`(`username`,`password`) VALUES ('admin@admin','adminpass')");
 

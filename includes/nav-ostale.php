@@ -26,14 +26,14 @@
             
             <!-- Logo -->
             <div id="logo">
-                <a href="index.php"><img src="images/logo2.png" data-sticky-logo="images/logo.png" data-transparent-logo="images/logo2.png" alt=""></a>
+                <a href="index.php"><img src="images/logo.png" data-sticky-logo="images/logo.png" data-transparent-logo="images/logo.png" alt=""></a>
             </div>
 
             <!-- Main Navigation -->
             <nav id="navigation">
                 <ul id="responsive">
 
-                    <li><a href="index.php" class="current">Home</a></li>
+                <li><a href="index.php" class="current">Home</a></li>
 
                     <li><a href="search-jobs.php">Job search</a>
                         <!-- <ul class="dropdown-nav">
@@ -191,6 +191,7 @@
 
     </div>
 </div>
+	</div>
 <!-- Header / End -->
 
 </header>
