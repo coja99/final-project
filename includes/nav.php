@@ -62,7 +62,7 @@
                         </ul> -->
                     </li>
 
-                    <li><a href="#">For Employers</a>
+                    <li><a href="#">Pretraga poslodavaca</a>
                         <ul class="dropdown-nav">
                             <li><a href="#">Find a Freelancer</a>
                                 <ul class="dropdown-nav">
