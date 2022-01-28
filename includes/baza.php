@@ -74,52 +74,101 @@ class Konekcija
         return $result;
     }
     function optionSelectCateogryName(){
-         $rezultat = "SELECT `ime` FROM `kategorije`";
+         $rezultat = "SELECT * FROM `kategorije`";
          $res = $this->connection->query($rezultat);
-         
-         
          if($res->num_rows > 0){
              while($row = $res->fetch_assoc()) {
-                 echo "<option>".$row['ime']."</option>";
+                 echo "<option value=".$row['id_kategorije'].">".$row['ime']."</option>";
              }
          }
          
 
     }
     function prikaziSveFirme(){
-        $rezultat = "SELECT `ime` FROM `kompanija`";
+        $rezultat = "SELECT * FROM `kompanija`";
         $res = $this->connection->query($rezultat);
         if($res->num_rows > 0){
             while($row = $res->fetch_assoc()) {
-                echo "<option>".$row['ime']."</option>";
+                echo "<option value=".$row['id_kompanije'].">".$row['ime']."</option>";
             }
         }
     }
     
     function prikaziKategoriju(){
         $rezultat = "SELECT `ime` FROM `kategorije`";
-        $sabiranje = "SELECT COUNT(*) AS `broj`,`ime` FROM `kategorije` INNER JOIN `oglas` ON `kategorije`.`id_kategorije` = `oglas`.`id_kategorije` GROUP BY `ime` ;";
+        $sabiranje = "SELECT COUNT(*) AS `broj`,`kategorije`.`ime` FROM `kategorije` INNER JOIN `oglas` ON `kategorije`.`id_kategorije` = `oglas`.`id_kategorije` WHERE `kategorije`.`id_kategorije` = `oglas`.`id_kategorije` GROUP BY `ime` ;";
         $sab = $this->connection->query($sabiranje);
         $res = $this->connection->query($rezultat);
         if($res->num_rows > 0){
             while($row = $res->fetch_assoc()) {
+                while($row = $sab->fetch_assoc()) {
                 echo "<div class=\"col-xl-3 col-md-6\">
 				    <a href=\"jobs-list-layout-1.html\" class=\"photo-box small\" data-background-image=\"images/job-category-01.jpg\">
 					    <div class=\"photo-box-content\">
 						    <h3>".$row['ime']."</h3>
+                            
 						    <span>".$row['broj']."</span>
+                        
 					    </div>
 				    </a>
 			    </div>";
+                }
             }
         }
     }
-    function dodajOglas(){
+    function dodajOglas($ime,$pozicija,$deskripcija,$id_firme,$id_kategorije){
         $rezultat = "INSERT INTO `oglas`( `ime_oglasa`, `pozicija`, `deskripcija`, `id_firme`, `id_kategorije`) VALUES (?,?,?,?,?)";
         $res = $this->connection->prepare($rezultat);
+        $res->bind_param("sssii",$ime,$pozicija,$deskripcija,$id_firme,$id_kategorije);
+        $res->execute();
+        return $res;
     }
     function dodajFirmu(){
         $rezultat = "INSERT INTO `kompanija`(`ime`, `deskripcija`, `email`, `slika`, `password`) VALUES (?,?,?,?,?)";
+    }
+    function cuvanjePodatakaDashboard(){
+
+    }
+    function prikaziOglasIndex(){
+        $upit = "SELECT * FROM `oglas`";
+        $res = $this->connection->query($upit);
+        if($res->num_rows > 0){
+           while($row = $res->fetch_assoc()){
+            echo "<div class=\"task-listing\">
+
+            
+            <div class=\"task-listing-details\">
+            
+                <div class=\"task-listing-description\">
+                    <h3 class=\"task-listing-title\">".$row['ime_oglasa']."</h3>
+                    <ul class=\"task-icons\">
+                    </ul>
+                    <div class=\"task-tags margin-top-15\">
+                       ".$row['deskripcija']."
+                    </div>
+                </div>
+            </div>
+            <div class=\"task-listing-bid\">
+							<div class=\"task-listing-bid-inner\">
+								
+								<span class=\"button button-sliding-icon ripple-effect\">Apply now<i class=\"icon-material-outline-arrow-right-alt\"></i></span>
+							</div>
+						</div>
+        </div>";
+           }
+           
+        }
+        
+    }
+    function prikaziOglasJobSearch(){
+        $upit = "SELECT * FROM `oglas`";
+        $res = $this->connection->query($upit);
+        if($res->num_rows > 0){
+           while($row = $res->fetch_assoc()){
+                
+           }
+           
+        }
     }
 }
 
