@@ -26,7 +26,7 @@ class Konekcija
 
         $this->connection->query("CREATE TABLE IF NOT EXISTS `kompanija` ( `id_kompanije` INT  AUTO_INCREMENT , `ime` VARCHAR(50) NOT NULL , `deskripcija` VARCHAR(100) NOT NULL,`email` VARCHAR(50) NOT NULL,`slika` VARCHAR(100),`password` VARCHAR(20) NOT NULL, PRIMARY KEY (`id_kompanije`))");
         $this->connection->query("CREATE TABLE IF NOT EXISTS `kategorije`(`id_kategorije` INT AUTO_INCREMENT, `ime` VARCHAR(50) NOT NULL,PRIMARY KEY (`id_kategorije`))");
-        $this->connection->query("CREATE TABLE IF NOT EXISTS `oglas`(`id_oglasa` INT AUTO_INCREMENT, `ime_oglasa` VARCHAR(50),`pozicija`VARCHAR(50),`deskripcija` VARCHAR(50),`id_firme` INT (10),PRIMARY KEY (`id_oglasa`))");
+        $this->connection->query("CREATE TABLE IF NOT EXISTS `oglas`(`id_oglasa` INT AUTO_INCREMENT, `ime_oglasa` VARCHAR(50),`pozicija`VARCHAR(50),`deskripcija` VARCHAR(50),`id_firme` INT (10),`id_kategorije` INT(10),PRIMARY KEY (`id_oglasa`))");
     }
 
     private function prepareSelectUser()
@@ -74,16 +74,54 @@ class Konekcija
         return $result;
     }
     function optionSelectCateogryName(){
-         $rezultat = $this->connection->prepare("SELECT * FROM `kategorije`");
+         $rezultat = "SELECT `ime` FROM `kategorije`";
+         $res = $this->connection->query($rezultat);
          
-         foreach($rezultat as $row) {
-            echo $row["ime"];
-
+         
+         if($res->num_rows > 0){
+             while($row = $res->fetch_assoc()) {
+                 echo "<option>".$row['ime']."</option>";
+             }
          }
          
+
+    }
+    function prikaziSveFirme(){
+        $rezultat = "SELECT `ime` FROM `kompanija`";
+        $res = $this->connection->query($rezultat);
+        if($res->num_rows > 0){
+            while($row = $res->fetch_assoc()) {
+                echo "<option>".$row['ime']."</option>";
+            }
+        }
     }
     
+    function prikaziKategoriju(){
+        $rezultat = "SELECT `ime` FROM `kategorije`";
+        $sabiranje = "SELECT COUNT(*) AS `broj`,`ime` FROM `kategorije` INNER JOIN `oglas` ON `kategorije`.`id_kategorije` = `oglas`.`id_kategorije` GROUP BY `ime` ;";
+        $sab = $this->connection->query($sabiranje);
+        $res = $this->connection->query($rezultat);
+        if($res->num_rows > 0){
+            while($row = $res->fetch_assoc()) {
+                echo "<div class=\"col-xl-3 col-md-6\">
+				    <a href=\"jobs-list-layout-1.html\" class=\"photo-box small\" data-background-image=\"images/job-category-01.jpg\">
+					    <div class=\"photo-box-content\">
+						    <h3>".$row['ime']."</h3>
+						    <span>".$row['broj']."</span>
+					    </div>
+				    </a>
+			    </div>";
+            }
+        }
+    }
+    function dodajOglas(){
+        $rezultat = "INSERT INTO `oglas`( `ime_oglasa`, `pozicija`, `deskripcija`, `id_firme`, `id_kategorije`) VALUES (?,?,?,?,?)";
+        $res = $this->connection->prepare($rezultat);
+    }
+    function dodajFirmu(){
+        $rezultat = "INSERT INTO `kompanija`(`ime`, `deskripcija`, `email`, `slika`, `password`) VALUES (?,?,?,?,?)";
+    }
 }
 
 $connection = new Konekcija();
-var_dump($connection->optionSelectCateogryName());
+
