@@ -1,3 +1,4 @@
+<?php include_once "./includes/baza.php"?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -24,7 +25,7 @@
 <header id="header-container" class="fullwidth">
 
 	<!-- Header -->
-	<?php include "./includes/nav-ostale.php" ?>
+	<?php include_once "./includes/nav-ostale.php" ?>
 	<!-- Header / End -->
 
 </header>
@@ -53,36 +54,12 @@
 						<i class="icon-material-outline-location-on"></i>
 					</div>
 				</div>
-
-				<!-- Keywords -->
-				<div class="sidebar-widget">
-					<h3>Keywords</h3>
-					<div class="keywords-container">
-						<div class="keyword-input-container">
-							<input type="text" class="keyword-input" placeholder="e.g. job title"/>
-							<button class="keyword-input-button ripple-effect"><i class="icon-material-outline-add"></i></button>
-						</div>
-						<div class="keywords-list"><!-- keywords go here --></div>
-						<div class="clearfix"></div>
-					</div>
-				</div>
-				
 				<!-- Category -->
 				<div class="sidebar-widget">
 					<h3>Category</h3>
-					<select class="selectpicker" multiple data-selected-text-format="count" data-size="7" title="All Categories">
-						<option>Accounting and Finance</option>
-						<option>Clerical & Data Entry</option>
-						<option>Counseling</option>
-						<option>Court Administration</option>
-						<option>Human Resources</option>
-						<option>Investigative</option>
-						<option>IT and Computers</option>
-						<option>Law Enforcement</option>
-						<option>Management</option>
-						<option>Miscellaneous</option>
-						<option>Public Relations</option>
-					</select>
+					<select id="select" class="selectpicker default" multiple data-selected-text-format="count" data-size="7" title="Select Category" >
+							<?php $connection->optionSelectCateogryName(); ?>
+						</select>
 				</div>
 			</div>
 		</div>
@@ -93,280 +70,34 @@
 			
 
 			<div class="listings-container compact-list-layout margin-top-35">
-				
 				<!-- Job Listing -->
 				<a href="single-job-page.html" class="job-listing">
-
 					<!-- Job Listing Details -->
 					<div class="job-listing-details">
-
 						<!-- Logo -->
 						<div class="job-listing-company-logo">
 							<img src="images/company-logo-01.png" alt="">
 						</div>
-
 						<!-- Details -->
 						<div class="job-listing-description">
 							<h3 class="job-listing-title">Bilingual Event Support Specialist</h3>
-
 							<!-- Job Listing Footer -->
 							<div class="job-listing-footer">
 								<ul>
-									<li><i class="icon-material-outline-business"></i> Hexagon <div class="verified-badge" title="Verified Employer" data-tippy-placement="top"></div></li>
+									<li><i class="icon-material-outline-business"></i> Hexagon </li>
 									<li><i class="icon-material-outline-location-on"></i> San Francissco</li>
-									<li><i class="icon-material-outline-business-center"></i> Full Time</li>
-									<li><i class="icon-material-outline-access-time"></i> 2 days ago</li>
 								</ul>
 							</div>
 						</div>
-
-						<!-- Bookmark -->
-						<span class="bookmark-icon"></span>
 					</div>
 				</a>	
 
 
-				<!-- Job Listing -->
-				<a href="single-job-page.html" class="job-listing">
-
-					<!-- Job Listing Details -->
-					<div class="job-listing-details">
-
-						<!-- Logo -->
-						<div class="job-listing-company-logo">
-							<img src="images/company-logo-05.png" alt="">
-						</div>
-
-						<!-- Details -->
-						<div class="job-listing-description">
-							<h3 class="job-listing-title">Competition Law Officer</h3>
-
-							<!-- Job Listing Footer -->
-							<div class="job-listing-footer">
-								<ul>
-									<li><i class="icon-material-outline-business"></i> Laxo</li>
-									<li><i class="icon-material-outline-location-on"></i> San Francissco</li>
-									<li><i class="icon-material-outline-business-center"></i> Full Time</li>
-									<li><i class="icon-material-outline-access-time"></i> 2 days ago</li>
-								</ul>
-							</div>
-						</div>
-
-						<!-- Bookmark -->
-						<span class="bookmark-icon"></span>
-					</div>
-				</a>
-				<!-- Job Listing -->
-				<a href="single-job-page.html" class="job-listing">
-
-					<!-- Job Listing Details -->
-					<div class="job-listing-details">
-
-						<!-- Logo -->
-						<div class="job-listing-company-logo">
-							<img src="images/company-logo-02.png" alt="">
-						</div>
-
-						<!-- Details -->
-						<div class="job-listing-description">
-							<h3 class="job-listing-title">Barista and Cashier</h3>
-
-							<!-- Job Listing Footer -->
-							<div class="job-listing-footer">
-								<ul>
-									<li><i class="icon-material-outline-business"></i> Coffee</li>
-									<li><i class="icon-material-outline-location-on"></i> San Francissco</li>
-									<li><i class="icon-material-outline-business-center"></i> Full Time</li>
-									<li><i class="icon-material-outline-access-time"></i> 2 days ago</li>
-								</ul>
-							</div>
-						</div>
-
-						<!-- Bookmark -->
-						<span class="bookmark-icon"></span>
-					</div>
-				</a>
 				
-
-				<!-- Job Listing -->
-				<a href="single-job-page.html" class="job-listing">
-
-					<!-- Job Listing Details -->
-					<div class="job-listing-details">
-
-						<!-- Logo -->
-						<div class="job-listing-company-logo">
-							<img src="images/company-logo-03.png" alt="">
-						</div>
-
-						<!-- Details -->
-						<div class="job-listing-description">
-							<h3 class="job-listing-title">Restaurant General Manager</h3>
-
-							<!-- Job Listing Footer -->
-							<div class="job-listing-footer">
-								<ul>
-									<li><i class="icon-material-outline-business"></i> King <div class="verified-badge" title="Verified Employer" data-tippy-placement="top"></div></li>
-									<li><i class="icon-material-outline-location-on"></i> San Francissco</li>
-									<li><i class="icon-material-outline-business-center"></i> Full Time</li>
-									<li><i class="icon-material-outline-access-time"></i> 2 days ago</li>
-								</ul>
-							</div>
-						</div>
-
-						<!-- Bookmark -->
-						<span class="bookmark-icon"></span>
-					</div>
-				</a>
-
-				<!-- Job Listing -->
-				<a href="single-job-page.html" class="job-listing">
-
-					<!-- Job Listing Details -->
-					<div class="job-listing-details">
-
-						<!-- Logo -->
-						<div class="job-listing-company-logo">
-							<img src="images/company-logo-05.png" alt="">
-						</div>
-
-						<!-- Details -->
-						<div class="job-listing-description">
-							<h3 class="job-listing-title">International Marketing Coordinator</h3>
-
-							<!-- Job Listing Footer -->
-							<div class="job-listing-footer">
-								<ul>
-									<li><i class="icon-material-outline-business"></i> Skyist</li>
-									<li><i class="icon-material-outline-location-on"></i> San Francissco</li>
-									<li><i class="icon-material-outline-business-center"></i> Full Time</li>
-									<li><i class="icon-material-outline-access-time"></i> 2 days ago</li>
-								</ul>
-							</div>
-						</div>
-
-						<!-- Bookmark -->
-						<span class="bookmark-icon"></span>
-					</div>
-				</a>
-
-				<!-- Job Listing -->
-				<a href="single-job-page.html" class="job-listing">
-
-					<!-- Job Listing Details -->
-					<div class="job-listing-details">
-
-						<!-- Logo -->
-						<div class="job-listing-company-logo">
-							<img src="images/company-logo-04.png" alt="">
-						</div>
-
-						<!-- Details -->
-						<div class="job-listing-description">
-							<h3 class="job-listing-title">Administrative Assistant</h3>
-
-							<!-- Job Listing Footer -->
-							<div class="job-listing-footer">
-								<ul>
-									<li><i class="icon-material-outline-business"></i> Mates</li>
-									<li><i class="icon-material-outline-location-on"></i> San Francissco</li>
-									<li><i class="icon-material-outline-business-center"></i> Full Time</li>
-									<li><i class="icon-material-outline-access-time"></i> 2 days ago</li>
-								</ul>
-							</div>
-						</div>
-
-						<!-- Bookmark -->
-						<span class="bookmark-icon"></span>
-					</div>
-				</a>
-
-
-				<!-- Job Listing -->
-				<a href="single-job-page.html" class="job-listing">
-
-					<!-- Job Listing Details -->
-					<div class="job-listing-details">
-
-						<!-- Logo -->
-						<div class="job-listing-company-logo">
-							<img src="images/company-logo-05.png" alt="">
-						</div>
-
-						<!-- Details -->
-						<div class="job-listing-description">
-							<h3 class="job-listing-title">Construction Labourers</h3>
-
-							<!-- Job Listing Footer -->
-							<div class="job-listing-footer">
-								<ul>
-									<li><i class="icon-material-outline-business"></i> Podous</li>
-									<li><i class="icon-material-outline-location-on"></i> San Francissco</li>
-									<li><i class="icon-material-outline-business-center"></i> Full Time</li>
-									<li><i class="icon-material-outline-access-time"></i> 2 days ago</li>
-								</ul>
-							</div>
-						</div>
-
-						<!-- Bookmark -->
-						<span class="bookmark-icon"></span>
-					</div>
-				</a>
-
-				<!-- Job Listing -->
-				<a href="single-job-page.html" class="job-listing">
-
-					<!-- Job Listing Details -->
-					<div class="job-listing-details">
-
-						<!-- Logo -->
-						<div class="job-listing-company-logo">
-							<img src="images/company-logo-06.png" alt="">
-						</div>
-
-						<!-- Details -->
-						<div class="job-listing-description">
-							<h3 class="job-listing-title">Human Resources Consultant</h3>
-
-							<!-- Job Listing Footer -->
-							<div class="job-listing-footer">
-								<ul>
-									<li><i class="icon-material-outline-business"></i> Trideo</li>
-									<li><i class="icon-material-outline-location-on"></i> San Francissco</li>
-									<li><i class="icon-material-outline-business-center"></i> Full Time</li>
-									<li><i class="icon-material-outline-access-time"></i> 2 days ago</li>
-								</ul>
-							</div>
-						</div>
-
-						<!-- Bookmark -->
-						<span class="bookmark-icon"></span>
-					</div>
-				</a>
 			</div>
 
 
-			<!-- Pagination -->
-			<div class="clearfix"></div>
-			<div class="row">
-				<div class="col-md-12">
-					<!-- Pagination -->
-					<div class="pagination-container margin-top-60 margin-bottom-60">
-						<nav class="pagination">
-							<ul>
-								<li class="pagination-arrow"><a href="#"><i class="icon-material-outline-keyboard-arrow-left"></i></a></li>
-								<li><a href="#">1</a></li>
-								<li><a href="#" class="current-page">2</a></li>
-								<li><a href="#">3</a></li>
-								<li><a href="#">4</a></li>
-								<li class="pagination-arrow"><a href="#"><i class="icon-material-outline-keyboard-arrow-right"></i></a></li>
-							</ul>
-						</nav>
-					</div>
-				</div>
-			</div>
-			<!-- Pagination / End -->
-
+			
 		</div>
 	</div>
 </div>

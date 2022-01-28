@@ -1,4 +1,5 @@
-<?php include "./includes/baza.php";
+<?php 
+include_once "./includes/baza.php";
 include_once "./dodaj-oglas.php";
 if(isset($_POST['oglas_ime']) && isset($_POST['oglas_pozicija']) && isset($_POST['oglas_firma']) && isset($_POST['oglas_kategorija']) && isset($_POST['oglas_deskripcija'])){
     $oglas_ime = $_POST['oglas_ime'];

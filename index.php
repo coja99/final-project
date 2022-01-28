@@ -1,4 +1,4 @@
-<?php include "./includes/baza.php" ?>
+<?php include_once "./includes/baza.php" ?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -19,7 +19,7 @@
 
 <!-- Wrapper -->
 <div id="wrapper" class="wrapper-with-transparent-header">
-<?php include "./includes/nav-index.php"; ?>
+<?php include_once "./includes/nav-index.php"; ?>
 
 
 

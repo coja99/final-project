@@ -19,7 +19,7 @@
 <!-- Wrapper -->
 <div id="wrapper">
 
-	<?php include "./includes/nav-ostale.php"; ?>
+	<?php include_once "./includes/nav-ostale.php"; ?>
 
 <div class="clearfix"></div>
 <!-- Header Container / End -->

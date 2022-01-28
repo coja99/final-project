@@ -21,7 +21,7 @@
 
 <!-- Header Container
 ================================================== -->
-<?php include "./includes/nav.php"; ?>
+<?php include_once "./includes/nav.php"; ?>
 
 <div class="clearfix"></div>
 <!-- Header Container / End -->

@@ -1,5 +1,5 @@
 <?php
-include_once('./includes/baza.php');
+include_once_once('./includes/baza.php');
 session_start();
 
 

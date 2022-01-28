@@ -1,4 +1,4 @@
-<?php include "./includes/baza.php" ?>
+<?php include_once "./includes/baza.php" ?>
 <!doctype html>
 <html lang="en">
 <head>
