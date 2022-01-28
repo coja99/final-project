@@ -42,59 +42,48 @@
 	<div class="row">
 		<div class="col-xl-3 col-lg-4">
 			<div class="sidebar-container">
-				<form action="" method="post"></form>
+				<form action="./dodaj-oglas.php"method="post">
 				<input class="margin-top-10 button full-width" type="submit" value="Add a job offer" >
-				<!-- Location -->
-				<div class="sidebar-widget">
-					<h3>Location</h3>
-					<div class="input-with-icon">
-						<div id="autocomplete-container">
-							<input id="autocomplete-input" type="text" placeholder="Location">
-						</div>
-						<i class="icon-material-outline-location-on"></i>
-					</div>
-				</div>
-				<!-- Category -->
+				</form>
+				<form action="" method="post">
 				<div class="sidebar-widget">
 					<h3>Category</h3>
-					<select id="select" class="selectpicker default" multiple data-selected-text-format="count" data-size="7" title="Select Category" >
+					<select id="select" class="selectpicker default" multiple data-selected-text-format="count" data-size="7" title="Select Category" name="jobs_select">
 							<?php $connection->optionSelectCateogryName(); ?>
-						</select>
+					</select>
 				</div>
+				<input class="margin-top-10 button full-width" type="submit" value="Search jobs" >
+				</form>
 			</div>
 		</div>
 		<div class="col-xl-9 col-lg-8 content-left-offset">
 
 			<h3 class="page-title">Search Results</h3>
-
+			<?php echo $connection->prikaziOglasIndex();?>
 			
 
-			<div class="listings-container compact-list-layout margin-top-35">
-				<!-- Job Listing -->
+			<!-- <div class="listings-container compact-list-layout margin-top-35">
+				
 				<a href="single-job-page.html" class="job-listing">
-					<!-- Job Listing Details -->
+					
 					<div class="job-listing-details">
-						<!-- Logo -->
+						
 						<div class="job-listing-company-logo">
 							<img src="images/company-logo-01.png" alt="">
 						</div>
-						<!-- Details -->
+					
 						<div class="job-listing-description">
 							<h3 class="job-listing-title">Bilingual Event Support Specialist</h3>
-							<!-- Job Listing Footer -->
-							<div class="job-listing-footer">
-								<ul>
-									<li><i class="icon-material-outline-business"></i> Hexagon </li>
-									<li><i class="icon-material-outline-location-on"></i> San Francissco</li>
-								</ul>
-							</div>
+							
+							<span class="button button-sliding-icon ripple-effect">Apply now<i class="icon-material-outline-arrow-right-alt\"></i></span>
+
 						</div>
 					</div>
 				</a>	
 
 
 				
-			</div>
+			</div> -->
 
 
 			
