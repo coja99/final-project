@@ -48,7 +48,7 @@
 				<form action="" method="post">
 				<div class="sidebar-widget">
 					<h3>Category</h3>
-					<select id="select" class="selectpicker default" multiple data-selected-text-format="count" data-size="7" title="Select Category" name="jobs_select">
+					<select id="select" class="selectpicker default" title="Select Category" name="jobs_select">
 							<?php $connection->optionSelectCateogryName(); ?>
 					</select>
 				</div>
@@ -59,7 +59,7 @@
 		<div class="col-xl-9 col-lg-8 content-left-offset">
 
 			<h3 class="page-title">Search Results</h3>
-			<?php echo $connection->prikaziOglasIndex();?>
+			<?php echo $connection->prikaziOglasJobSearch();?>
 			
 
 			<!-- <div class="listings-container compact-list-layout margin-top-35">

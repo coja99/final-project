@@ -161,6 +161,42 @@ class Konekcija
         }
         
     }
+    function prikaziSearchJobs(){
+        $upit = "SELECT * FROM `oglas`";
+        $ime_komp = "SELECT `kompanija`.`ime`
+        FROM `kompanija`
+        INNER JOIN `oglas`
+        ON `kompanija`.`id_kompanije` = `oglas`.`id_firme`";
+        $res = $this->connection->query($upit);
+        if($res->num_rows > 0){
+           while($row = $res->fetch_assoc()){
+            echo "<div class=\"task-listing\">
+
+            
+            <div class=\"task-listing-details\">
+            
+                <div class=\"task-listing-description\">
+                    <h3 class=\"task-listing-title\">".$row['ime_oglasa']."</h3>
+                    <h5 class=\"task-listing-title\">".$row['ime_oglasa']."</h5>
+                    <ul class=\"task-icons\">
+                    </ul>
+                    <div class=\"task-tags margin-top-15\">
+                       ".$row['deskripcija']."
+                    </div>
+                </div>
+            </div>
+            <div class=\"task-listing-bid\">
+							<div class=\"task-listing-bid-inner\">
+								
+								<span class=\"button button-sliding-icon ripple-effect\">Apply now<i class=\"icon-material-outline-arrow-right-alt\"></i></span>
+							</div>
+						</div>
+        </div>";
+           }
+           
+        }
+        
+    }
     function prikaziOglasJobSearch(){
         $upit = "SELECT * FROM `oglas`";
         $res = $this->connection->query($upit);
