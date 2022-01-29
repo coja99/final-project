@@ -33,7 +33,7 @@
             <nav id="navigation">
                 <ul id="responsive">
 
-                    <li><a href="index.php" class="current">Home</a></li>
+                    <li><a href="index.php">Home</a></li>
 
                     <li><a href="search-jobs.php">Job search</a>
                         
@@ -42,57 +42,6 @@
                     <li><a href="browse-employer.php">Search for an Employer</a>
                         
                     </li>
-
-                    <li><a href="#">Dashboard</a>
-                        <ul class="dropdown-nav">
-                            <li><a href="dashboard.html">Dashboard</a></li>
-                            <li><a href="dashboard-messages.html">Messages</a></li>
-                            <li><a href="dashboard-bookmarks.html">Bookmarks</a></li>
-                            <li><a href="dashboard-reviews.html">Reviews</a></li>
-                            <li><a href="dashboard-manage-jobs.html">Jobs</a>
-                                <ul class="dropdown-nav">
-                                    <li><a href="dashboard-manage-jobs.html">Manage Jobs</a></li>
-                                    <li><a href="dashboard-manage-candidates.html">Manage Candidates</a></li>
-                                    <li><a href="dashboard-post-a-job.html">Post a Job</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="dashboard-manage-tasks.html">Tasks</a>
-                                <ul class="dropdown-nav">
-                                    <li><a href="dashboard-manage-tasks.html">Manage Tasks</a></li>
-                                    <li><a href="dashboard-manage-bidders.html">Manage Bidders</a></li>
-                                    <li><a href="dashboard-my-active-bids.html">My Active Bids</a></li>
-                                    <li><a href="dashboard-post-a-task.html">Post a Task</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="dashboard-settings.html">Settings</a></li>
-                        </ul>
-                    </li>
-
-                    <li><a href="#">Pages</a>
-                        <ul class="dropdown-nav">
-                            <li>
-                                <a href="#">Open Street Map</a>
-                                <ul class="dropdown-nav">
-                                    <li><a href="jobs-list-layout-full-page-map-OpenStreetMap.html">Full Page List + Map</a></li>
-                                    <li><a href="jobs-grid-layout-full-page-map-OpenStreetMap.html">Full Page Grid + Map</a></li>
-                                    <li><a href="single-job-page-OpenStreetMap.html">Job Page</a></li>
-                                    <li><a href="single-company-profile-OpenStreetMap.html">Company Profile</a></li>
-                                    <li><a href="pages-contact-OpenStreetMap.html">Contact</a></li>
-                                    <li><a href="jobs-list-layout-1-OpenStreetMap.html">Location Autocomplete</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="pages-blog.html">Blog</a></li>
-                            <li><a href="pages-pricing-plans.html">Pricing Plans</a></li>
-                            <li><a href="pages-checkout-page.html">Checkout Page</a></li>
-                            <li><a href="pages-invoice-template.html">Invoice Template</a></li>
-                            <li><a href="pages-user-interface-elements.html">User Interface Elements</a></li>
-                            <li><a href="pages-icons-cheatsheet.html">Icons Cheatsheet</a></li>
-                            <li><a href="pages-login.html">Login & Register</a></li>
-                            <li><a href="pages-404.html">404 Page</a></li>
-                            <li><a href="pages-contact.html">Contact</a></li>
-                        </ul>
-                    </li>
-
                 </ul>
             </nav>
             <div class="clearfix"></div>
@@ -131,8 +80,6 @@
                     </div>
                     
                     <ul class="user-menu-small-nav">
-                        <li><a href="dashboard.html"><i class="icon-material-outline-dashboard"></i> Dashboard</a></li>
-                        <li><a href="dashboard-settings.html"><i class="icon-material-outline-settings"></i> Settings</a></li>
                         <li><a href="index-logged-out.html"><i class="icon-material-outline-power-settings-new"></i> Logout</a></li>
                     </ul>
 
