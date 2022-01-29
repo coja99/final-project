@@ -321,7 +321,7 @@
 											</a>
 										</li>
 										<li>
-											<a href="https://www.linkedin.com/in/jovan-jovanovic-5808151a2/" title="LinkedIn" data-tippy-placement="bottom" data-tippy-theme="light">
+											<a href="https://www.linkedin.com/in/jovan-jovanovic-5808151a2/" title="Linkedin" data-tippy-placement="bottom" data-tippy-theme="light">
 												<i class="icon-brand-linkedin"></i>
 											</a>
 										</li>
