@@ -286,59 +286,6 @@
 </div>
 <!-- Testimonials / End -->
 
-
-<!-- Counters -->
-<div class="section padding-top-70 padding-bottom-75">
-	<div class="container">
-		<div class="row">
-
-			<div class="col-xl-12">
-				<div class="counters-container">
-					
-					<!-- Counter -->
-					<div class="single-counter">
-						<i class="icon-line-awesome-suitcase"></i>
-						<div class="counter-inner">
-							<h3><span class="counter">1,586</span></h3>
-							<span class="counter-title">Jobs Posted</span>
-						</div>
-					</div>
-
-					<!-- Counter -->
-					<div class="single-counter">
-						<i class="icon-line-awesome-legal"></i>
-						<div class="counter-inner">
-							<h3><span class="counter">3,543</span></h3>
-							<span class="counter-title">Tasks Posted</span>
-						</div>
-					</div>
-
-					<!-- Counter -->
-					<div class="single-counter">
-						<i class="icon-line-awesome-user"></i>
-						<div class="counter-inner">
-							<h3><span class="counter">2,413</span></h3>
-							<span class="counter-title">Active Members</span>
-						</div>
-					</div>
-
-					<!-- Counter -->
-					<div class="single-counter">
-						<i class="icon-line-awesome-trophy"></i>
-						<div class="counter-inner">
-							<h3><span class="counter">99</span>%</h3>
-							<span class="counter-title">Satisfaction Rate</span>
-						</div>
-					</div>
-
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-<!-- Counters / End -->
-
-
 <!-- Footer
 ================================================== -->
 <div id="footer">
@@ -369,41 +316,27 @@
 								<div class="footer-row-inner">
 									<ul class="footer-social-links">
 										<li>
-											<a href="#" title="Facebook" data-tippy-placement="bottom" data-tippy-theme="light">
+											<a href="https://www.facebook.com/cojacojacoja111/" title="Facebook" data-tippy-placement="bottom" data-tippy-theme="light">
 												<i class="icon-brand-facebook-f"></i>
 											</a>
 										</li>
 										<li>
-											<a href="#" title="Twitter" data-tippy-placement="bottom" data-tippy-theme="light">
-												<i class="icon-brand-twitter"></i>
+											<a href="https://www.linkedin.com/in/jovan-jovanovic-5808151a2/" title="LinkedIn" data-tippy-placement="bottom" data-tippy-theme="light">
+												<i class="icon-brand-linkedin"></i>
 											</a>
 										</li>
 										<li>
-											<a href="#" title="Google Plus" data-tippy-placement="bottom" data-tippy-theme="light">
-												<i class="icon-brand-google-plus-g"></i>
+											<a href="https://github.com/coja99" title="GitHub" data-tippy-placement="bottom" data-tippy-theme="light">
+												<i class="icon-brand-github"></i>
 											</a>
 										</li>
-										<li>
-											<a href="#" title="LinkedIn" data-tippy-placement="bottom" data-tippy-theme="light">
-												<i class="icon-brand-linkedin-in"></i>
-											</a>
-										</li>
+										
 									</ul>
 									<div class="clearfix"></div>
 								</div>
 							</div>
 							
-							<!-- Language Switcher -->
-							<div class="footer-row">
-								<div class="footer-row-inner">
-									<select class="selectpicker language-switcher" data-selected-text-format="count" data-size="5">
-										<option selected>English</option>
-										<option>Français</option>
-										<option>Español</option>
-										<option>Deutsch</option>
-									</select>
-								</div>
-							</div>
+							
 						</div>
 
 					</div>
@@ -419,80 +352,17 @@
 		<div class="container">
 			<div class="row">
 
-				<!-- Links -->
-				<div class="col-xl-2 col-lg-2 col-md-3">
-					<div class="footer-links">
-						<h3>For Candidates</h3>
-						<ul>
-							<li><a href="#"><span>Browse Jobs</span></a></li>
-							<li><a href="#"><span>Add Resume</span></a></li>
-							<li><a href="#"><span>Job Alerts</span></a></li>
-							<li><a href="#"><span>My Bookmarks</span></a></li>
-						</ul>
-					</div>
-				</div>
-
-				<!-- Links -->
-				<div class="col-xl-2 col-lg-2 col-md-3">
-					<div class="footer-links">
-						<h3>For Employers</h3>
-						<ul>
-							<li><a href="#"><span>Browse Candidates</span></a></li>
-							<li><a href="#"><span>Post a Job</span></a></li>
-							<li><a href="#"><span>Post a Task</span></a></li>
-							<li><a href="#"><span>Plans & Pricing</span></a></li>
-						</ul>
-					</div>
-				</div>
-
-				<!-- Links -->
-				<div class="col-xl-2 col-lg-2 col-md-3">
-					<div class="footer-links">
-						<h3>Helpful Links</h3>
-						<ul>
-							<li><a href="#"><span>Contact</span></a></li>
-							<li><a href="#"><span>Privacy Policy</span></a></li>
-							<li><a href="#"><span>Terms of Use</span></a></li>
-						</ul>
-					</div>
-				</div>
-
-				<!-- Links -->
-				<div class="col-xl-2 col-lg-2 col-md-3">
-					<div class="footer-links">
-						<h3>Account</h3>
-						<ul>
-							<li><a href="#"><span>Log In</span></a></li>
-							<li><a href="#"><span>My Account</span></a></li>
-						</ul>
-					</div>
-				</div>
-
-				<!-- Newsletter -->
-				<div class="col-xl-4 col-lg-4 col-md-12">
-					<h3><i class="icon-feather-mail"></i> Sign Up For a Newsletter</h3>
-					<p>Weekly breaking news, analysis and cutting edge advices on job searching.</p>
-					<form action="#" method="get" class="newsletter">
-						<input type="text" name="fname" placeholder="Enter your email address">
-						<button type="submit"><i class="icon-feather-arrow-right"></i></button>
-					</form>
-				</div>
+			
+				
+				&copy; <script type="text/javascript">document.write(new Date().getFullYear());</script><strong><a href="https://github.com/coja99" style="color:white !important "> Jovan Jovanovic</a></strong>. All Rights Reserved.
+				
+			
 			</div>
 		</div>
 	</div>
 	<!-- Footer Middle Section / End -->
 	
-	<!-- Footer Copyrights -->
-	<div class="footer-bottom-section">
-		<div class="container">
-			<div class="row">
-				<div class="col-xl-12">
-					© 2019 <strong>Hireo</strong>. All Rights Reserved.
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- Footer Copyrights / End -->
+	
 
 </div>
 <!-- Footer / End -->

@@ -27,6 +27,7 @@ class Konekcija
         $this->connection->query("CREATE TABLE IF NOT EXISTS `kompanija` ( `id_kompanije` INT  AUTO_INCREMENT , `ime` VARCHAR(50) NOT NULL , `deskripcija` VARCHAR(100) NOT NULL,`email` VARCHAR(50) NOT NULL,`slika` VARCHAR(100),`password` VARCHAR(20) NOT NULL, PRIMARY KEY (`id_kompanije`))");
         $this->connection->query("CREATE TABLE IF NOT EXISTS `kategorije`(`id_kategorije` INT AUTO_INCREMENT, `ime` VARCHAR(50) NOT NULL,PRIMARY KEY (`id_kategorije`))");
         $this->connection->query("CREATE TABLE IF NOT EXISTS `oglas`(`id_oglasa` INT AUTO_INCREMENT, `ime_oglasa` VARCHAR(50),`pozicija`VARCHAR(50),`deskripcija` VARCHAR(50),`id_firme` INT (10),`id_kategorije` INT(10),PRIMARY KEY (`id_oglasa`))");
+        $this->connection->query("CREATE TABLE IF NOT EXISTS `prijave`(`id_prijave` INT AUTO_INCREMENT,`id_oglasa` INT , `id_firme` INT NOT NULL,`id_usera` INT, PRIMARY KEY (`id_prijave`))");
     }
 
     private function prepareSelectUser()
