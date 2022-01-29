@@ -69,17 +69,10 @@
 			<div class="col-md-12">
 				<ul class="intro-stats margin-top-45 hide-under-992px">
 					<li>
-						<strong class="counter">1,586</strong>
+						<strong class="counter"><?php $connection->zbirOglasa() ?></strong>
 						<span>Jobs Posted</span>
 					</li>
-					<li>
-						<strong class="counter">3,543</strong>
-						<span>Employers</span>
-					</li>
-					<li>
-						<strong class="counter">1,232</strong>
-						<span>Freelancers</span>
-					</li>
+					
 				</ul>
 			</div>
 		</div>

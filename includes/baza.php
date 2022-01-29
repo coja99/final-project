@@ -171,7 +171,20 @@ class Konekcija
            
         }
     }
+    function zbirOglasa(){
+        $upit = "SELECT ime_oglasa, COUNT(*) 
+        FROM oglas 
+        GROUP BY ime_oglasa;";
+        $res = $this->connection->query($upit);
+        if($res->num_rows > 0){
+            while($row = $res->fetch_assoc()){
+                echo count($row);
+            }
+            
+         }
+    }
 }
 
 $connection = new Konekcija();
+
 
