@@ -52,6 +52,7 @@ class Konekcija
     function registrujUsera($email,$password){
         $kreiraj = $this->prepRegistracija();
         $kreiraj->bind_param("ss",$email,$password);
+        password_hash($password,PASSWORD_BCRYPT);
         $kreiraj->execute();
         return "Uspesna registracija";
     }
