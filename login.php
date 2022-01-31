@@ -81,6 +81,9 @@
 
 				</form>
 			</section>
+            <?php if(isset($greska) && $greska) :?>
+                <div id='greska'>Pogrešan unos. Proveri lozinku ili korisničko ime.</div>
+            <?php endif; ?>
 
 		</div>
 
