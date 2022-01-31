@@ -1,6 +1,5 @@
 <?php 
-
-
+include_once("./includes/logince.php");
 include_once "./includes/baza.php" ;
 
 if(isset($_COOKIE['user'])) {

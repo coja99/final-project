@@ -73,7 +73,7 @@
                             <div class="user-details">
                                 <div class="user-avatar status-online"><img src="images/user-avatar-small-01.jpg" alt=""></div>
                                 <div class="user-name">
-                                     <?php $_SESSION['user'] ?>
+                                     <?php $_SESSION['user']?>
                                 </div>
                             </div>
                             
