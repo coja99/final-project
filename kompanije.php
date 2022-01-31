@@ -25,7 +25,7 @@
 <header id="header-container" class="fullwidth">
 
 	<!-- Header -->
-	<?php include_once "./includes/nav-ostale.php" ?>
+	<?php include_once "./includes/nav-dodavanje.php" ?>
 	<!-- Header / End -->
 
 </header>
@@ -40,53 +40,25 @@
 ================================================== -->
 <div class="container">
 	<div class="row">
-		<div class="col-xl-3 col-lg-4">
-			<div class="sidebar-container">
-				<form action="./dodaj-oglas.php"method="post">
-				<input class="margin-top-10 button full-width" type="submit" value="Add a job offer" >
-				
-				
-			</div>
-		</div>
-		<div class="col-xl-9 col-lg-8 content-left-offset">
+		
+		<div class="col-xl-12 col-lg-12 content-left-offset">
 
 			<h3 class="page-title" style="margin-bottom:20px">Search Results</h3>
-			<?php echo $connection->prikaziOglasIndex(); ?>
+			<?php $connection->prikaziFirmu(); ?>
 			
-
-			<!-- <div class="listings-container compact-list-layout margin-top-35">
-				
-				<a href="single-job-page.html" class="job-listing">
-					
-					<div class="job-listing-details">
-						
-						<div class="job-listing-company-logo">
-							<img src="images/company-logo-01.png" alt="">
-						</div>
-					
-						<div class="job-listing-description">
-							<h3 class="job-listing-title">Bilingual Event Support Specialist</h3>
-							
-							<span class="button button-sliding-icon ripple-effect">Apply now<i class="icon-material-outline-arrow-right-alt\"></i></span>
-
-						</div>
-					</div>
-				</a>	
-
-
-				
-			</div> -->
+            
 
 
 			
 		</div>
+        
 	</div>
 </div>
 
 
 <!-- Footer
 ================================================== -->
-<?php include "./includes/footer.php"; ?>
+<?php include './includes/footer.php'; ?>
 <!-- Footer / End -->
 
 </div>

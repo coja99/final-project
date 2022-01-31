@@ -1,11 +1,4 @@
-<?php 
-include_once "./includes/baza.php" ;
-
-if(isset($_COOKIE['user'])) {
-    $_SESSION['user'] = $_COOKIE['user'];
-}
-
-?>
+<?php include_once "./includes/baza.php" ?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -25,13 +18,16 @@ if(isset($_COOKIE['user'])) {
 <body>
 
 <!-- Wrapper -->
-<div id="wrapper" class="wrapper-with-transparent-header">
-<?php include_once "./includes/nav-index.php"; ?>
+<div id="wrapper">
 
-
-
-<!-- Intro Banner
+<!-- Header Container
 ================================================== -->
+<?php include './includes/nav-logout.php'; ?>
+<div class="clearfix"></div>
+<!-- Header Container / End -->
+
+
+
 <div class="intro-banner dark-overlay" data-background-image="images/home-background-02.jpg">
 
 	<!-- Transparent Header Spacer -->
@@ -59,13 +55,13 @@ if(isset($_COOKIE['user'])) {
 					<!-- Search Field -->
 					<div class="intro-search-field">
 					<label for="select" class="field-title ripple-effect">Categories :</label>
-						<select id="select" class="selectpicker default" multiple data-selected-text-format="count" data-size="7" title="All Categories" >
+						<select id="select" class="selectpicker default" title="All Categories" >
 							<?php $connection->optionSelectCateogryName(); ?>
 						</select>
 					</div>
 					<!-- Button -->
 					<div class="intro-search-button">
-						<button class="button ripple-effect" onclick="window.location.href='freelancers-grid-layout-full-page.html'">Search</button>
+						<button class="button ripple-effect" onclick="window.location.href='search-jobs.php'">Search</button>
 					</div>
 				</div>
 			</div>
@@ -296,12 +292,9 @@ if(isset($_COOKIE['user'])) {
 <!-- Footer
 ================================================== -->
 <?php include_once('./includes/footer.php');?>
-<!-- Footer / End -->
 
 </div>
 <!-- Wrapper / End -->
-
-
 <!-- Scripts
 ================================================== -->
 <script src="js/jquery-3.4.1.min.js"></script>
@@ -334,12 +327,31 @@ $('#snackbar-user-status label').click(function() {
 }); 
 </script>
 
-<!-- Leaflet // Docs: https://leafletjs.com/ -->
-<script src="js/leaflet.min.js"></script>
 
-<!-- Leaflet Geocoder + Search Autocomplete // Docs: https://github.com/perliedman/leaflet-control-geocoder -->
-<script src="js/leaflet-autocomplete.js"></script>
-<script src="js/leaflet-control-geocoder.js"></script>
+<!-- Google Autocomplete -->
+<script>
+	function initAutocomplete() {
+		 var options = {
+		  types: ['(cities)'],
+		  // componentRestrictions: {country: "us"}
+		 };
+
+		 var input = document.getElementById('autocomplete-input');
+		 var autocomplete = new google.maps.places.Autocomplete(input, options);
+	}
+
+	// Autocomplete adjustment for homepage
+	if ($('.intro-banner-search-form')[0]) {
+	    setTimeout(function(){ 
+	        $(".pac-container").prependTo(".intro-search-field.with-autocomplete");
+	    }, 300);
+	}
+
+</script>
+
+<!-- Google API & Maps -->
+<!-- Geting an API Key: https://developers.google.com/maps/documentation/javascript/get-api-key -->
+<script src="https://maps.googleapis.com/maps/api/js?key=&libraries=places"></script>
 
 </body>
 </html>

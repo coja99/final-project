@@ -22,7 +22,7 @@
 
 <!-- Header Container
 ================================================== -->
-<?php include './includes/nav-logout.php'; ?>
+<?php include './includes/nav-index.php'; ?>
 <div class="clearfix"></div>
 <!-- Header Container / End -->
 

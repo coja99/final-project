@@ -1,4 +1,5 @@
-<?php include_once "./includes/baza.php"?>
+
+<?php include_once "./includes/baza.php" ?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -15,78 +16,87 @@
 <link rel="stylesheet" href="css/colors/blue.css">
 
 </head>
-<body class="gray">
+<body>
 
 <!-- Wrapper -->
 <div id="wrapper">
 
 <!-- Header Container
 ================================================== -->
-<header id="header-container" class="fullwidth">
-
-	<!-- Header -->
-	<?php include_once "./includes/nav-ostale.php" ?>
-	<!-- Header / End -->
-
-</header>
+<?php include_once "includes/nav-dodavanje.php"?>
 <div class="clearfix"></div>
 <!-- Header Container / End -->
 
-<!-- Spacer -->
-<div class="margin-top-90"></div>
-<!-- Spacer / End-->
-
-<!-- Page Content
+<!-- Titlebar
 ================================================== -->
-<div class="container">
-	<div class="row">
-		<div class="col-xl-3 col-lg-4">
-			<div class="sidebar-container">
-				<form action="./dodaj-oglas.php"method="post">
-				<input class="margin-top-10 button full-width" type="submit" value="Add a job offer" >
-				
-				
+<div id="titlebar" class="gradient">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+
+				<h2>Create a company</h2>
+
+				<!-- Breadcrumbs -->
+				<nav id="breadcrumbs" class="dark">
+					<ul>
+						<li><a href="#">Home</a></li>
+						<li><a href="#">Pages</a></li>
+						<li>Create a company</li>
+					</ul>
+				</nav>
+
 			</div>
-		</div>
-		<div class="col-xl-9 col-lg-8 content-left-offset">
-
-			<h3 class="page-title" style="margin-bottom:20px">Search Results</h3>
-			<?php echo $connection->prikaziOglasIndex(); ?>
-			
-
-			<!-- <div class="listings-container compact-list-layout margin-top-35">
-				
-				<a href="single-job-page.html" class="job-listing">
-					
-					<div class="job-listing-details">
-						
-						<div class="job-listing-company-logo">
-							<img src="images/company-logo-01.png" alt="">
-						</div>
-					
-						<div class="job-listing-description">
-							<h3 class="job-listing-title">Bilingual Event Support Specialist</h3>
-							
-							<span class="button button-sliding-icon ripple-effect">Apply now<i class="icon-material-outline-arrow-right-alt\"></i></span>
-
-						</div>
-					</div>
-				</a>	
-
-
-				
-			</div> -->
-
-
-			
 		</div>
 	</div>
 </div>
 
 
+<!-- Content
+================================================== -->
+
+
+<!-- Container -->
+<div class="container">
+	<div class="row">
+
+		
+		<div class="col-xl-8 col-lg-8 offset-xl-2 offset-lg-2">
+
+			<section id="contact" class="margin-bottom-60">
+				<h3 class="headline margin-top-15 margin-bottom-35">Enter all fields</h3>
+
+				<form method="post" name="contactform" id="contactform" autocomplete="on" action="dodaj-firmu-final.php">
+					<div class="row">
+						<div class="col-md-6">
+							<div class="input-with-icon-left">
+								<input class="with-border" name="firma_ime" type="text" id="name" placeholder="Company name" required="required" />
+								<i class="icon-material-outline-person-pin"></i>
+							</div>
+						</div>
+                        <div class="col-md-6">
+							<div class="input-with-icon-left">
+								<input class="with-border" name="firma_email" type="email" id="name" placeholder="E-mail" required="required" />
+								<i class="icon-material-outline-account-circle"></i>
+							</div>
+						</div>
+					</div>
+					<div>
+						<textarea class="with-border" name="firma_deskripcija" cols="40" rows="5" id="comments" placeholder="Company description" spellcheck="true" required="required"></textarea>
+					</div>
+					<input name="submit"type="submit" class="submit button margin-top-15" id="submit" value="Create company" />
+
+				</form>
+			</section>
+
+		</div>
+
+	</div>
+</div>
+<!-- Container / End -->
+
 <!-- Footer
 ================================================== -->
-<?php include "./includes/footer.php"; ?>
+<?php include_once('./includes/footer.php');?>
 <!-- Footer / End -->
 
 </div>
@@ -124,22 +134,12 @@ $('#snackbar-user-status label').click(function() {
 }); 
 </script>
 
-<!-- Google Autocomplete -->
-<script>
-	function initAutocomplete() {
-		 var options = {
-		  types: ['(cities)'],
-		  // componentRestrictions: {country: "us"}
-		 };
-
-		 var input = document.getElementById('autocomplete-input');
-		 var autocomplete = new google.maps.places.Autocomplete(input, options);
-	}
-</script>
-
 <!-- Google API & Maps -->
 <!-- Geting an API Key: https://developers.google.com/maps/documentation/javascript/get-api-key -->
 <script src="https://maps.googleapis.com/maps/api/js?key=&libraries=places"></script>
+<script src="js/infobox.min.js"></script>
+<script src="js/markerclusterer.js"></script>
+<script src="js/maps.js"></script>
 
 </body>
 </html>

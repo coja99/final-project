@@ -1,4 +1,4 @@
-<div id="footer">
+<div id="footer" style="margin-top:40px;">
 	
 	<!-- Footer Top Section -->
 	<div class="footer-top-section">
@@ -64,7 +64,7 @@
 
 			
 				
-				&copy; <script type="text/javascript">document.write(new Date().getFullYear());</script><strong><a href="https://github.com/coja99" style="color:white !important "> Jovan Jovanovic</a></strong>. All Rights Reserved.
+				&copy; <script type="text/javascript">document.write(new Date().getFullYear());</script><strong><a href="https://github.com/coja99" style="color:white !important ">  Jovan Jovanovic</a></strong>. All Rights Reserved.
 				
 			
 			</div>

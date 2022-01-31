@@ -14,9 +14,9 @@ class Konekcija
         }
         $this->connection->query("CREATE DATABASE IF NOT EXISTS `poslovi`");
         $this->connection->select_db('poslovi');
-        $this->connection->query("CREATE TABLE IF NOT EXISTS `user` ( `id_usera` INT  AUTO_INCREMENT , `ime` VARCHAR(50) , `prezime` VARCHAR(50),`email` VARCHAR(50) NOT NULL,`slika` VARCHAR(100),`password` VARCHAR(20) NOT NULL, `poslodavac` BOOLEAN , PRIMARY KEY (`id_usera`))");
+        $this->connection->query("CREATE TABLE IF NOT EXISTS `user` ( `id_usera` INT  AUTO_INCREMENT ,`email` VARCHAR(50) NOT NULL,`password` VARCHAR(20) NOT NULL, PRIMARY KEY (`id_usera`))");
 
-        $this->connection->query("CREATE TABLE IF NOT EXISTS `kompanija` ( `id_kompanije` INT  AUTO_INCREMENT , `ime` VARCHAR(50) NOT NULL , `deskripcija` VARCHAR(100) NOT NULL,`email` VARCHAR(50) NOT NULL,`slika` VARCHAR(100),`password` VARCHAR(20) NOT NULL, PRIMARY KEY (`id_kompanije`))");
+        $this->connection->query("CREATE TABLE IF NOT EXISTS `kompanija` ( `id_kompanije` INT  AUTO_INCREMENT , `ime` VARCHAR(50) NOT NULL , `deskripcija` VARCHAR(100) NOT NULL,`email` VARCHAR(50) NOT NULL, PRIMARY KEY (`id_kompanije`))");
         $this->connection->query("CREATE TABLE IF NOT EXISTS `kategorije`(`id_kategorije` INT AUTO_INCREMENT, `ime` VARCHAR(50) NOT NULL,PRIMARY KEY (`id_kategorije`))");
         $this->connection->query("CREATE TABLE IF NOT EXISTS `oglas`(`id_oglasa` INT AUTO_INCREMENT, `ime_oglasa` VARCHAR(50),`pozicija`VARCHAR(50),`deskripcija` VARCHAR(50),`id_firme` INT (10),`id_kategorije` INT(10),PRIMARY KEY (`id_oglasa`))");
         $this->connection->query("CREATE TABLE IF NOT EXISTS `prijave`(`id_prijave` INT AUTO_INCREMENT,`id_oglasa` INT , `id_firme` INT NOT NULL,`id_usera` INT, PRIMARY KEY (`id_prijave`))");
@@ -103,7 +103,7 @@ class Konekcija
             while($row = $res->fetch_assoc()) {
                 while($row = $sab->fetch_assoc()) {
                 echo "<div class=\"col-xl-3 col-md-6\">
-				    <a href=\"jobs-list-layout-1.html\" class=\"photo-box small\" data-background-image=\"images/job-category-01.jpg\">
+				    <a href=\"search-jobs.php\" class=\"photo-box small\" data-background-image=\"images/job-category-01.jpg\">
 					    <div class=\"photo-box-content\">
 						    <h3>".$row['ime']."</h3>
                             
@@ -218,12 +218,48 @@ class Konekcija
             
          }
     }
-    function prikaziFirme(){
-        $upit = "SELECT * FROM `kompanije`";
+    function kreirajFirmu($ime,$deskripcija,$email){
+        $upit = "INSERT INTO `kompanija`( `ime`, `deskripcija`, `email`) VALUES (?,?,?)";
+        $res = $this->connection->prepare($upit);
+        $res->bind_param("sss",$ime,$deskripcija,$email);
+        $res->execute();
+        return $res;
+    }
+    function dodajKategoriju($ime){
+        $upit = "INSERT INTO `kategorije`(`ime`) VALUES (?)";
+        $res2 = $this->connection->prepare($upit);
+        $res2->bind_param("s",$ime);
+        $res2->execute();
+        return $res2;
+    }
+    function prikaziFirmu(){
+        $upit = "SELECT * FROM `kompanija`";
         $res = $this->connection->query($upit);
         if($res->num_rows > 0){
             while($row = $res->fetch_assoc()){
-                
+               echo "<div class=\"listings-container compact-list-layout margin-top-35\">
+				
+				<a class=\"job-listing\">
+					
+					<div class=\"job-listing-details\">
+						
+						<div class=\"job-listing-company-logo\">
+							<img src=\"images/company-logo-01.png\" >
+						</div>
+					
+						<div class=\"job-listing-description\">
+							<h3 class=\"job-listing-title\">".$row['ime']."</h3>
+							<span style=\"color:blue\">".$row['email']."</span><br>
+							<span>".$row['deskripcija']."</span>
+
+						</div>
+					</div>
+				</a>	
+
+
+				
+			
+			</div>";
             }
         }
     }

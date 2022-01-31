@@ -35,8 +35,11 @@
                 <ul id="responsive">
 
                     <li><a href="index.php">Home</a></li>
-                    <li><a href="search-jobs.php">Job offers</a> </li>
-                    <li><a href="kompanije.php">List of comapnies</a></li>
+
+                    <li><a href="search-jobs.php">Job offers</a>
+                        
+                    </li>
+
                     
                 </ul>
             </nav>
@@ -47,24 +50,7 @@
         <!-- Left Side Content / End -->
 
 
-        <!-- Right Side Content / End -->
-        <div class="right-side" style="padding: 25px 0">
-        <a href="index.php" style="color:black"><i class="icon-material-outline-power-settings-new"></i> Logout</a>
-
-            </div>
-            <!-- User Menu / End -->
-
-            <!-- Mobile Navigation Button -->
-            <span class="mmenu-trigger">
-                <button class="hamburger hamburger--collapse" type="button">
-                    <span class="hamburger-box">
-                        <span class="hamburger-inner"></span>
-                    </span>
-                </button>
-            </span>
-
-        </div>
-        <!-- Right Side Content / End -->
+        
 
     </div>
 </div>

@@ -23,7 +23,7 @@
 
 <!-- Header Container
 ================================================== -->
-<?php include_once "includes/nav-ostale.php"?>
+<?php include_once "includes/nav-dodavanje.php"?>
 <div class="clearfix"></div>
 <!-- Header Container / End -->
 
@@ -63,19 +63,19 @@
 		<div class="col-xl-8 col-lg-8 offset-xl-2 offset-lg-2">
 
 			<section id="contact" class="margin-bottom-60">
-				<h3 class="headline margin-top-15 margin-bottom-35">Unesite sva ponudjena polja</h3>
+				<h3 class="headline margin-top-15 margin-bottom-35">Fill all blank spots</h3>
 
 				<form method="post" name="contactform" id="contactform" autocomplete="on" action="dodaj-oglas-final.php">
 					<div class="row">
 						<div class="col-md-6">
 							<div class="input-with-icon-left">
-								<input class="with-border" name="oglas_ime" type="text" id="name" placeholder="Ime oglasa" required="required" />
+								<input class="with-border" name="oglas_ime" type="text" id="name" placeholder="Job Offer name" required="required" />
 								<i class="icon-material-outline-person-pin"></i>
 							</div>
 						</div>
                         <div class="col-md-6">
 							<div class="input-with-icon-left">
-								<input class="with-border" name="oglas_pozicija" type="text" id="name" placeholder="Pozicija" required="required" />
+								<input class="with-border" name="oglas_pozicija" type="text" id="name" placeholder="Position" required="required" />
 								<i class="icon-material-outline-account-circle"></i>
 							</div>
 						</div>
@@ -83,18 +83,20 @@
 					<div class="row">
 						<div class="col-md-6" >
 							<div>
-								<select id="select" class="selectpicker" name="oglas_firma" title="Firma" >
+								<select id="select" class="selectpicker" name="oglas_firma" title="Company" >
 										<?php $connection->prikaziSveFirme(); ?>
 								</select>
-								 <p style="margin:5px"> Ne vidite Vašu firmu, dodajte je <a href="dodaj-firmu.php">ovde</a></p>
+								 <p style="margin:5px"> Dont see your company, add it <a href="dodaj-firmu.php">here</a></p>
 									
 							</div>
 						</div>
 						<div class="col-md-6" >
 							<div>
-								<select id="select" class="selectpicker" name="oglas_kategorija" multiple data-selected-text-format="count" data-size="7" title="Kategorija" >
+								<select id="select" class="selectpicker" name="oglas_kategorija" multiple data-selected-text-format="count" data-size="7" title="Category" >
 										<?php $connection->optionSelectCateogryName(); ?>
+										
 								</select>
+								<p style="margin:5px"> Dont see a category, add it <a href="dodaj-kategoriju.php">here</a></p>
 							</div>
 						</div>
 						
@@ -103,10 +105,10 @@
 					
 
 					<div>
-						<textarea class="with-border" name="oglas_deskripcija" cols="40" rows="5" id="comments" placeholder="Deksripcija oglasa" spellcheck="true" required="required"></textarea>
+						<textarea class="with-border" name="oglas_deskripcija" cols="40" rows="5" id="comments" placeholder="Job offer description" spellcheck="true" required="required"></textarea>
 					</div>
 
-					<input type="submit" class="submit button margin-top-15" id="submit" value="Postavi oglas" />
+					<input type="submit" class="submit button margin-top-15" id="submit" value="Submit it" />
 
 				</form>
 			</section>
