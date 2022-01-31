@@ -1,4 +1,3 @@
-<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,7 +33,7 @@
             <nav id="navigation">
                 <ul id="responsive">
 
-                    <li><a href="index.php" class="current">Home</a></li>
+                    <li><a href="index.php">Home</a></li>
 
                     <li><a href="search-jobs.php">Job search</a>
                         
@@ -81,7 +80,7 @@
                     </div>
                     
                     <ul class="user-menu-small-nav">
-                        <li><a href="index-logged-out.html"><i class="icon-material-outline-power-settings-new"></i> Logout</a></li>
+                        <li><a href="index-logged-out.php"><i class="icon-material-outline-power-settings-new"></i> Logout</a></li>
                     </ul>
 
                     </div>
@@ -104,7 +103,6 @@
 
     </div>
 </div>
-	</div>
 <!-- Header / End -->
 
 </header>

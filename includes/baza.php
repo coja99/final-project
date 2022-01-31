@@ -12,17 +12,9 @@ class Konekcija
         if ($this->connection->error) {
             die("Greska pri povezivanju: $this->connection->error");
         }
-
-        //kreiramo bazu ako ne postoji
         $this->connection->query("CREATE DATABASE IF NOT EXISTS `poslovi`");
-
-        //selektujemo bazu da bi smo radili sa njom
         $this->connection->select_db('poslovi');
-
-        //kreiramo tabelu user ako ne postoji
         $this->connection->query("CREATE TABLE IF NOT EXISTS `user` ( `id_usera` INT  AUTO_INCREMENT , `ime` VARCHAR(50) , `prezime` VARCHAR(50),`email` VARCHAR(50) NOT NULL,`slika` VARCHAR(100),`password` VARCHAR(20) NOT NULL, `poslodavac` BOOLEAN , PRIMARY KEY (`id_usera`))");
-        //INSERT IGNORE ignorise duplikate za UNIQUE kolonu (username), tako da nece biti ponavljanja admina u tabeli
-        // $this->connection->query("INSERT IGNORE INTO `user`(`username`,`password`) VALUES ('admin@admin','adminpass')");
 
         $this->connection->query("CREATE TABLE IF NOT EXISTS `kompanija` ( `id_kompanije` INT  AUTO_INCREMENT , `ime` VARCHAR(50) NOT NULL , `deskripcija` VARCHAR(100) NOT NULL,`email` VARCHAR(50) NOT NULL,`slika` VARCHAR(100),`password` VARCHAR(20) NOT NULL, PRIMARY KEY (`id_kompanije`))");
         $this->connection->query("CREATE TABLE IF NOT EXISTS `kategorije`(`id_kategorije` INT AUTO_INCREMENT, `ime` VARCHAR(50) NOT NULL,PRIMARY KEY (`id_kategorije`))");
@@ -32,7 +24,13 @@ class Konekcija
 
     private function prepareSelectUser()
     {
-        return $this->connection->prepare("SELECT * FROM `user` WHERE `password`=? AND `username`=?");
+        return $this->connection->prepare("SELECT * FROM `user` WHERE `email`=? AND `password`=?");
+    }
+    function proveriKorisnikaa($email, $pass): bool {
+        $prepared = $this->prepareSelectUser();
+        $prepared->bind_param("ss",$email,$pass);
+        $prepared->execute();
+        return $prepared->get_result()->num_rows == 1;
     }
     private function prepKreirajUsera(){
         return $this->connection->prepare("INSERT INTO `user` (`ime`, `prezime`, `email`,`slika`,`password`) VALUES (?,?,?,?,?)");
