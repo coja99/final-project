@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -72,7 +73,7 @@
                             <div class="user-details">
                                 <div class="user-avatar status-online"><img src="images/user-avatar-small-01.jpg" alt=""></div>
                                 <div class="user-name">
-                                    Tom Smith <span>Freelancer</span>
+                                     <?php $_SESSION['user'] ?>
                                 </div>
                             </div>
                             
@@ -80,7 +81,7 @@
                     </div>
                     
                     <ul class="user-menu-small-nav">
-                        <li><a href="index-logged-out.html"><i class="icon-material-outline-power-settings-new"></i> Logout</a></li>
+                        <li><a href="index-logged-out.php"><i class="icon-material-outline-power-settings-new"></i> Logout</a></li>
                     </ul>
 
                     </div>

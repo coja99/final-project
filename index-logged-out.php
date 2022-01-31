@@ -153,8 +153,8 @@
 			<!-- Right Side Content / End -->
 			<div class="right-side">
 
-				<div class="header-widget">
-					<a href="#sign-in-dialog" class="popup-with-zoom-anim log-in-button"><i class="icon-feather-log-in"></i> <span>Log In / Register</span></a>
+				<div style="margin-top:30px">
+					<a href="login.php">Login</a> | <a href="registracija.php">Register</a>
 				</div>
 
 				<!-- Mobile Navigation Button -->
@@ -1137,95 +1137,6 @@
 
 </div>
 <!-- Wrapper / End -->
-
-
-<!-- Sign In Popup
-================================================== -->
-<div id="sign-in-dialog" class="zoom-anim-dialog mfp-hide dialog-with-tabs">
-
-	<!--Tabs -->
-	<div class="sign-in-form">
-
-		<ul class="popup-tabs-nav">
-			<li><a href="#login">Log In</a></li>
-			<li><a href="#register">Register</a></li>
-		</ul>
-
-		<div class="popup-tabs-container">
-
-			<!-- Login -->
-			<div class="popup-tab-content" id="login">
-				
-				<!-- Welcome Text -->
-				<div class="welcome-text">
-					<h3>We're glad to see you again!</h3>
-					<span>Don't have an account? <a href="#" class="register-tab">Sign Up!</a></span>
-				</div>
-					
-				<!-- Form -->
-				<form method="post" id="login-form">
-					<div class="input-with-icon-left">
-						<i class="icon-material-baseline-mail-outline"></i>
-						<input type="text" class="input-text with-border" name="emailaddress" id="emailaddress" placeholder="Email Address" required/>
-					</div>
-
-					<div class="input-with-icon-left">
-						<i class="icon-material-outline-lock"></i>
-						<input type="password" class="input-text with-border" name="password" id="password" placeholder="Password" required/>
-					</div>
-					
-				</form>
-				
-				<!-- Button -->
-				<button class="button full-width button-sliding-icon ripple-effect" type="submit" form="login-form">Log In <i class="icon-material-outline-arrow-right-alt"></i></button>
-				
-				
-
-			</div>
-
-			<!-- Register -->
-			<div class="popup-tab-content" id="register">
-				
-				<!-- Welcome Text -->
-				<div class="welcome-text">
-					<h3>Let's create your account!</h3>
-				</div>
-
-				
-					
-				<!-- Form -->
-				<form method="post" action="./registracija.php" id="register-account-form">
-					<div class="input-with-icon-left">
-						<i class="icon-material-baseline-mail-outline"></i>
-						<input type="text" class="input-text with-border" name="emailaddress-register" id="emailaddress-register" placeholder="Email Address" required/>
-					</div>
-
-					<div class="input-with-icon-left" title="Should be at least 8 characters long" data-tippy-placement="bottom">
-						<i class="icon-material-outline-lock"></i>
-						<input type="password" class="input-text with-border" name="password-register" id="password-register" placeholder="Password" required/>
-					</div>
-
-					<div class="input-with-icon-left">
-						<i class="icon-material-outline-lock"></i>
-						<input type="password" class="input-text with-border" name="password-repeat-register" id="password-repeat-register" placeholder="Repeat Password" required/>
-					</div>
-					<input class="margin-top-10 button full-width" type="submit" value="Register"  >
-				</form>
-				
-				
-				
-				
-				
-				
-
-			</div>
-
-		</div>
-	</div>
-</div>
-<!-- Sign In Popup / End -->
-
-
 <!-- Scripts
 ================================================== -->
 <script src="js/jquery-3.4.1.min.js"></script>

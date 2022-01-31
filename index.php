@@ -1,4 +1,15 @@
-<?php include_once "./includes/baza.php" ?>
+<?php 
+
+
+include_once "./includes/baza.php" ;
+
+if(isset($_COOKIE['user'])) {
+    $_SESSION['user'] = $_COOKIE['user'];
+}
+
+if(!isset($_SESSION['user'])) {
+    die('Molimo vas da kliknete <a href="./login.php">ovde</a> da se ulogujete');
+}?>
 <!doctype html>
 <html lang="en">
 <head>
