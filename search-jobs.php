@@ -44,22 +44,14 @@
 			<div class="sidebar-container">
 				<form action="./dodaj-oglas.php"method="post">
 				<input class="margin-top-10 button full-width" type="submit" value="Add a job offer" >
-				</form>
-				<form action="" method="post">
-				<div class="sidebar-widget">
-					<h3>Category</h3>
-					<select id="select" class="selectpicker default" title="Select Category" name="jobs_select">
-							<?php $connection->optionSelectCateogryName(); ?>
-					</select>
-				</div>
-				<input class="margin-top-10 button full-width" type="submit" value="Search jobs" >
-				</form>
+				
+				
 			</div>
 		</div>
 		<div class="col-xl-9 col-lg-8 content-left-offset">
 
-			<h3 class="page-title">Search Results</h3>
-			<?php echo $connection->prikaziOglasJobSearch();?>
+			<h3 class="page-title" style="margin-bottom:20px">Search Results</h3>
+			<?php echo $connection->prikaziOglasIndex(); ?>
 			
 
 			<!-- <div class="listings-container compact-list-layout margin-top-35">

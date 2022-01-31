@@ -91,8 +91,8 @@
 </div>
 <!-- Container / End -->
 
-<!-- Footer
-<?php include_once('./includes/footer.php');?>
+<!-- Footer-->
+<?php include './includes/footer.php'; ?>
 <!-- Footer / End -->
 
 </div>

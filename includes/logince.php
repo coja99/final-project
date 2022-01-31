@@ -2,7 +2,7 @@
  include_once "./baza.php";
 if(isset($_POST['emailaddress']) && isset($_POST['password'])) {
     if($connection->proveriKorisnikaa($_POST['emailaddress'],$_POST['password'])) {
-        $_SESSION['user'] = $_POST['user'];
+        $_SESSION['user'] = $_POST['emailaddress'];
         header('Location:../index.php');
     }
     $greska = true;

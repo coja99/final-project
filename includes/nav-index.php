@@ -53,39 +53,8 @@
 
 
         <!-- Right Side Content / End -->
-        <div class="right-side">
-            <!-- User Menu -->
-            <div class="header-widget">
-
-                <!-- Messages -->
-                <div class="header-notifications user-menu">
-                    <div class="header-notifications-trigger">
-                        <a href="#"><div class="user-avatar status-online"><img src="images/user-avatar-small-01.jpg" alt=""></div></a>
-                    </div>
-
-                    <!-- Dropdown -->
-                    <div class="header-notifications-dropdown">
-
-                        <!-- User Status -->
-                        <div class="user-status">
-
-                            <!-- User Name / Avatar -->
-                            <div class="user-details">
-                                <div class="user-avatar status-online"><img src="images/user-avatar-small-01.jpg" alt=""></div>
-                                <div class="user-name">
-                                     <?php $_SESSION['user']?>
-                                </div>
-                            </div>
-                            
-                                
-                    </div>
-                    
-                    <ul class="user-menu-small-nav">
-                        <li><a href="index-logged-out.php"><i class="icon-material-outline-power-settings-new"></i> Logout</a></li>
-                    </ul>
-
-                    </div>
-                </div>
+        <div class="right-side" style="margin-top:30px">
+        <a href="index-logged-out.php" style="color:white"><i class="icon-material-outline-power-settings-new"></i> Logout</a>
 
             </div>
             <!-- User Menu / End -->
