@@ -8,7 +8,7 @@ if(isset($_COOKIE['user'])) {
 }
 
 if(!isset($_SESSION['user'])) {
-    die('Molimo vas da kliknete <a href="./login.php">ovde</a> da se ulogujete');
+    die(include("index-logged-out.php"));
 }?>
 <!doctype html>
 <html lang="en">
