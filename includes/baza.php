@@ -218,6 +218,15 @@ class Konekcija
             
          }
     }
+    function prikaziFirme(){
+        $upit = "SELECT * FROM `kompanije`";
+        $res = $this->connection->query($upit);
+        if($res->num_rows > 0){
+            while($row = $res->fetch_assoc()){
+                
+            }
+        }
+    }
 }
 
 $connection = new Konekcija();
