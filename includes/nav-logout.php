@@ -39,6 +39,7 @@
                     <li><a href="index.php">Home</a></li>
 
                     <li><a href="search-jobs.php">Job offers</a>
+					<li><a href="kompanije.php">List of comapnies</a></li>
                         
                     </li>
                 </ul>

@@ -5,7 +5,7 @@
 
 <!-- Basic Page Needs
 ================================================== -->
-<title>Hireo</title>
+<title>Sajt za zaposljavanje</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -68,7 +68,7 @@
 		</div>
 
 		<!-- Stats -->
-		<div class="row">
+		<!-- <div class="row">
 			<div class="col-md-12">
 				<ul class="intro-stats margin-top-45 hide-under-992px">
 					<li>
@@ -78,7 +78,7 @@
 					
 				</ul>
 			</div>
-		</div>
+		</div> -->
 
 	</div>
 </div>
@@ -95,7 +95,7 @@
 			<!-- Section Headline -->
 			<div class="col-xl-12">
 				<div class="section-headline centered margin-top-0 margin-bottom-45">
-					<h3>Popular Categories</h3>
+					<h3>Categories with job offers</h3>
 				</div>
 			</div>
 			<?php $connection->prikaziKategoriju(); ?>

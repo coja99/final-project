@@ -129,9 +129,20 @@ class Konekcija
     function cuvanjePodatakaDashboard(){
 
     }
+     function prikaziKategorijuu(){
+        $uput ="SELECT `kategorije`.`ime` FROM `oglas` INNER JOIN `kategorije` ON `kategorije`.`id_kategorije` = `oglas`.`id_kategorije` WHERE `kategorije`.`id_kategorije` = `oglas`.`id_kategorije`;";
+        $res = $this->conntection->query($uput);
+        if($res->num_rows > 0){
+            while($row = $res->fetch_assoc()){
+                echo $row;
+            }
+        }
+    }
     function prikaziOglasIndex(){
         $upit = "SELECT * FROM `oglas`";
+        
         $res = $this->connection->query($upit);
+        
         if($res->num_rows > 0){
            while($row = $res->fetch_assoc()){
             echo "<div class=\"task-listing\">
@@ -263,6 +274,7 @@ class Konekcija
             }
         }
     }
+   
 }
 
 $connection = new Konekcija();

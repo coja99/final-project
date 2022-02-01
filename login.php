@@ -6,7 +6,7 @@
 
 <!-- Basic Page Needs
 ================================================== -->
-<title>Hireo</title>
+<title>Login</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -23,7 +23,7 @@
 
 <!-- Header Container
 ================================================== -->
-<?php include_once "includes/nav-ostale.php"?>
+<?php include_once "includes/nav-dodavanje.php"?>
 <div class="clearfix"></div>
 <!-- Header Container / End -->
 
